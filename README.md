@@ -16,3 +16,7 @@ Also add the following environment properties to your application's Elastic Bean
 | USERIFY_SELF_SIGNED  | Either 1 or 0, depending on if Userify should check certificates. Usually should be 0.        |
 | USERIFY_SHIM_HOST    | Usually shim.userify.com if you're using Userify Cloud, or your server hostname otherwise.    |
 | USERIFY_STATIC_HOST  | Usually static.userify.com if you're using Userify Cloud, or your server hostname otherwise.  |
+
+After each instance comes up, the Userify script will take a few extra seconds to get called because this occurs after all other EB operations are completed. Check output in /var/log/userify-shim.log.
+
+This script was completely developed by Gaël DONAT @goshiz at Recommerce.com with assistance from the Userify dev team and is a supported Userify shim installation method for AWS.
